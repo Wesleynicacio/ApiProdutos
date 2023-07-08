@@ -1,0 +1,77 @@
+Registro de usuário:
+
+Método: POST
+URL: http://localhost:3000/register
+
+Corpo da solicitação:
+json
+{
+  "username": "usuário",
+  "password": "senha"
+}
+
+
+Login de usuário:
+
+Método: POST
+URL: http://localhost:3000/login
+Corpo da solicitação:
+json
+{
+  "username": "usuário",
+  "password": "senha"
+}
+
+
+Obter detalhes do usuário:
+
+Método: GET
+URL: http://localhost:3000/user
+Cabeçalhos:
+token: [Token JWT obtido após o login]
+
+
+
+Criar um novo produto:
+
+Método: POST
+URL: http://localhost:3000/products
+Corpo da solicitação:
+json
+{
+  "token": "[Token JWT obtido após o login]",
+  "name": "produto",
+  "price": 10.99
+}
+
+
+
+Atualizar um produto existente:
+
+Método: PUT
+URL: http://localhost:3000/products/[nome-do-produto]
+Cabeçalhos:
+token: [Token JWT obtido após o login]
+Corpo da solicitação:
+json
+{
+  "price": 15.99
+}
+
+
+
+Excluir um produto:
+
+Método: DELETE
+URL: http://localhost:3000/products/[nome-do-produto]
+Cabeçalhos:
+token: [Token JWT obtido após o login]
+Obter a lista de produtos:
+
+Método: GET
+URL: http://localhost:3000/products
+Esses são apenas exemplos de como as solicitações podem ser feitas usando uma ferramenta cliente HTTP.
+Você pode adaptar as rotas e os parâmetros de acordo com suas necessidades.
+
+Lembre-se de que esses exemplos são simplificados e podem exigir mais
+validações e tratamento de erros em um ambiente de produção real.
